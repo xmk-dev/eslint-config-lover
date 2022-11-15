@@ -10,7 +10,7 @@ both back-end and front-end ones.
 
 ## Usage
 
-### Install JavaScript
+### Install
 
 ```
 npm i -D eslint-config-lover
