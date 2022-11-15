@@ -1,0 +1,20 @@
+{
+  "extends": "./tsconfig.json",
+  "include": [
+    "src",
+    "tests",
+    "styles",
+    "lib",
+    "tooling",
+    "custom-declarations",
+    "health-tests",
+    "integration-tests",
+    "scripts",
+    ".storybook",
+    "__mocks__",
+    "babel.config.js",
+    "commitlint.config.js",
+    "jest.config.js",
+    ".eslintrc.js"
+  ],
+}

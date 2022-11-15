@@ -1,0 +1,38 @@
+node_modules/
+.env
+*.tar.gz
+
+# Generated directories
+build/
+flow-coverage/
+
+# Temp files
+*~
+.module-cache
+_.*.pem
+_.*.key
+
+# MacOS files
+.DS_STORE
+
+# Misc log files
+*.log*
+
+#############
+## EDITORS ##
+#############
+
+# IntelliJ
+.idea/
+*.iml
+
+# SublimeText
+*.sublime-project
+*.sublime-workspace
+
+# VIM
+*.swp
+*.swo
+
+# Visual Studio Code
+*.code-workspace
