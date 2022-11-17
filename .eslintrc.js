@@ -167,8 +167,20 @@ module.exports = {
       rules: {
         // typescript
         '@typescript-eslint/indent': 'off',
+        '@typescript-eslint/ban-types': 'warn',
         '@typescript-eslint/ban-ts-comment': 'warn',
         '@typescript-eslint/no-misused-promises': 'warn',
+        '@typescript-eslint/consistent-type-definitions': [
+          'error',
+          'interface',
+        ],
+        '@typescript-eslint/consistent-type-imports': [
+          'error',
+          {
+            prefer: 'type-imports',
+            fixStyle: 'inline-type-imports',
+          },
+        ],
       },
     },
   ],
