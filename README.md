@@ -1,4 +1,8 @@
 # ESLint Config Lover
+# [![npm version][npm-image]][npm-url]
+
+[npm-image]:https://badge.fury.io/js/eslint-config-lover.svg
+[npm-url]:http://npmjs.org/package/eslint-config-lover
 
 Lover's approach to JavaScript and TypeScript.
 
