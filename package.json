@@ -1,7 +1,7 @@
 {
   "name": "eslint-config-lover",
   "license": "MIT",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "main": "index.js",
   "description": "Lover's approach to JavaScript/TypeScript.",
   "publishConfig": {
@@ -24,6 +24,7 @@
     "@typescript-eslint/parser": "latest",
     "eslint-config-airbnb": "latest",
     "eslint-config-prettier": "latest",
+    "eslint-import-resolver-typescript": "^3.5.3",
     "eslint-plugin-eslint-comments": "latest",
     "eslint-plugin-import": "latest",
     "eslint-plugin-jest": "latest",

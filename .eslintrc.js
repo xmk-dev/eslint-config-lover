@@ -158,6 +158,11 @@ module.exports = {
       parserOptions: {
         project: ['./tsconfig.eslint.json'],
       },
+      settings: {
+        'import/resolver': {
+          typescript: {},
+        },
+      },
       extends: [
         'plugin:import/typescript',
         'plugin:@typescript-eslint/recommended',
