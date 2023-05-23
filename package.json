@@ -1,22 +1,26 @@
 {
-  "name": "eslint-config-lover",
   "license": "MIT",
-  "version": "1.1.0",
+  "version": "2.0.0",
+  "name": "eslint-config-lover",
+  "private": false,
   "main": "index.js",
   "description": "Lover's approach to JavaScript/TypeScript.",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },
+  "engines": {
+    "node": ">=18.0.0"
+  },
   "scripts": {
     "lint": "eslint .",
     "publish": "npm publish",
-    "patch": "npm --no-git-tag-version version patch",
     "major": "npm --no-git-tag-version version major",
-    "minor": "npm --no-git-tag-version version minor"
+    "minor": "npm --no-git-tag-version version minor",
+    "patch": "npm --no-git-tag-version version patch"
   },
   "repository": {
     "type": "git",
-    "url": "git@github.schibsted.io:ab/eslint-config-aftonbladet.git"
+    "url": "git@github.com:xmk-dev/eslint-config-lover.git"
   },
   "dependencies": {
     "@types/eslint": "latest",
@@ -24,12 +28,13 @@
     "@typescript-eslint/parser": "latest",
     "eslint-config-airbnb": "latest",
     "eslint-config-prettier": "latest",
-    "eslint-import-resolver-typescript": "^3.5.3",
+    "eslint-import-resolver-typescript": "latest",
     "eslint-plugin-eslint-comments": "latest",
     "eslint-plugin-import": "latest",
     "eslint-plugin-jest": "latest",
     "eslint-plugin-jsx": "latest",
     "eslint-plugin-no-unsanitized": "latest",
+    "eslint-plugin-node": "latest",
     "eslint-plugin-prettier": "latest",
     "eslint-plugin-react": "latest",
     "eslint-plugin-react-hooks": "latest",
