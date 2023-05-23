@@ -26,8 +26,8 @@
     "major": "npm --no-git-tag-version version major",
     "minor": "npm --no-git-tag-version version minor",
     "patch": "npm --no-git-tag-version version patch",
-    "ci": "echo \"No CI\" && exit 1",
-    "test": "echo \"No tests\" && exit 1"
+    "ci": "echo \"No CI\"",
+    "test": "echo \"No tests\""
   },
   "repository": {
     "type": "git",
