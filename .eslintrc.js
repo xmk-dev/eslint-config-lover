@@ -3,10 +3,6 @@ module.exports = {
     node: true,
     es2022: true,
     browser: true,
-    'jest/globals': true,
-  },
-  settings: {
-    jest: { version: 29 },
   },
   parserOptions: {
     ecmaVersion: 'latest',
@@ -14,17 +10,16 @@ module.exports = {
   },
   extends: [
     'airbnb',
+    'plugin:node/recommended',
     'plugin:unicorn/all',
     'plugin:import/errors',
     'plugin:eslint-comments/recommended',
-    'plugin:jest/recommended',
-    'plugin:jest/style',
     'plugin:no-unsanitized/DOM',
     'plugin:security/recommended',
     'plugin:sonarjs/recommended',
     'prettier',
   ],
-  plugins: ['unicorn', 'prettier', 'jest'],
+  plugins: ['unicorn', 'prettier'],
   globals: {
     RequestInit: 'readonly',
     MediaMetadata: 'readonly',
@@ -53,21 +48,6 @@ module.exports = {
     // import
     'import/extensions': 'off',
     'import/prefer-default-export': 'off',
-    'import/no-extraneous-dependencies': [
-      'error',
-      {
-        devDependencies: [
-          '**/*.test.ts',
-          '**/*.test.tsx',
-          '**/*.test.js',
-          '**/*.test.jsx',
-          '**/*.spec.ts',
-          '**/*.spec.tsx',
-          '**/*.spec.js',
-          '**/*.spec.jsx',
-        ],
-      },
-    ],
     // filenames
     'filenames/no-index': 'off',
     // unicorn
@@ -75,7 +55,7 @@ module.exports = {
       'error',
       { disallowedPrefixes: ['new', 'for', 'map'] },
     ],
-    'unicorn/no-array-for-each': 'warn',
+    'unicorn/no-array-for-each': 'off',
     'unicorn/prevent-abbreviations': [
       'error',
       {
@@ -119,6 +99,7 @@ module.exports = {
     ],
   },
   overrides: [
+    // react
     {
       files: ['*.tsx', '*.jsx'],
       plugins: ['react-hooks', 'jsx-a11y'],
@@ -152,6 +133,7 @@ module.exports = {
         ],
       },
     },
+    // typescript
     {
       files: ['*.ts', '*.tsx'],
       parser: '@typescript-eslint/parser',
@@ -185,6 +167,30 @@ module.exports = {
             prefer: 'type-imports',
           },
         ],
+      },
+    },
+    // tests
+    {
+      files: [
+        '**/*.test.ts',
+        '**/*.test.tsx',
+        '**/*.test.js',
+        '**/*.test.jsx',
+        '**/*.spec.ts',
+        '**/*.spec.tsx',
+        '**/*.spec.js',
+        '**/*.spec.jsx',
+      ],
+      env: {
+        'jest/globals': true,
+      },
+      settings: {
+        jest: { version: 'latest' },
+      },
+      extends: ['plugin:jest/recommended', 'plugin:jest/style'],
+      rules: {
+        // import
+        'import/no-extraneous-dependencies': 'off',
       },
     },
   ],
