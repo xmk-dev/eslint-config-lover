@@ -5,6 +5,7 @@
   "private": false,
   "main": "index.js",
   "description": "Lover's approach to JavaScript/TypeScript.",
+  "keywords": ["eslint", "eslintconfig", "config", "lover", "javascript", "typescript", "styleguide", "es2022"],
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },
