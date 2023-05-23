@@ -1,11 +1,20 @@
 {
   "license": "MIT",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "name": "eslint-config-lover",
   "private": false,
   "main": "index.js",
   "description": "Lover's approach to JavaScript/TypeScript.",
-  "keywords": ["eslint", "eslintconfig", "config", "lover", "javascript", "typescript", "styleguide", "es2022"],
+  "keywords": [
+    "eslint",
+    "eslintconfig",
+    "config",
+    "lover",
+    "javascript",
+    "typescript",
+    "styleguide",
+    "es2022"
+  ],
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },
