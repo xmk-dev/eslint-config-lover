@@ -10,7 +10,6 @@ module.exports = {
   },
   extends: [
     'airbnb',
-    'plugin:node/recommended',
     'plugin:unicorn/all',
     'plugin:import/errors',
     'plugin:eslint-comments/recommended',
@@ -20,12 +19,9 @@ module.exports = {
     'prettier',
   ],
   plugins: ['unicorn', 'prettier'],
-  globals: {
-    RequestInit: 'readonly',
-    MediaMetadata: 'readonly',
-  },
   rules: {
     // eslint
+    'curly': 'error',
     'consistent-return': 'off',
     'prefer-destructuring': 'error',
     'sort-imports': [
@@ -99,6 +95,11 @@ module.exports = {
     ],
   },
   overrides: [
+    // node
+    {
+      files: ['*.cjs', '*.js', '*.ts'],
+      extends: ['plugin:node/recommended']
+    }
     // react
     {
       files: ['*.tsx', '*.jsx'],
